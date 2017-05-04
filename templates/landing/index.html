@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <ul class="collection with-header">
+        {%for asteroid in asteroids%}
+
+                <li class="collection-header"><h4>{{asteroid.id}}. Name:&nbsp;{{asteroid.name}}</h4></li>
+                <li class="collection-header"><a class="waves-effect waves-light btn-large" href="{{asteroid.url}}">url</a></li>
+                <li class="collection-header"><h4>{{asteroid.is_hazardous}}</h4></li>
+                <li class="collection-header"><h4>{{asteroid.diameter_max}}</h4></li>
+                <li class="collection-header"><h4>{{asteroid.diameter_min}}</h4></li>
+        {%endfor%}
+        </ul>
+{% endblock %}
+
+    </div>
